@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>HAP Media — Reels &amp; Video Agency · Founded by Harshan Hashmi</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--jet:#050d16;--card:#0e1c2b;--blue:#7f93a8;--rose:#d7dee6;--text:#f4f4f6;--muted:#9aa7b4;--grad:linear-gradient(100deg,#7f93a8,#d7dee6);color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--jet);color:var(--text);font-family:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;line-height:1.6;overflow-x:hidden}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+#pb{position:fixed;top:0;left:0;height:4px;width:0;background:var(--grad);z-index:30}
+.fx{position:fixed;inset:0;z-index:-1;pointer-events:none}
+.orb{position:absolute;border-radius:50%;filter:blur(90px)}
+.o1{width:380px;height:380px;left:-120px;top:5%;background:var(--blue);opacity:.35}
+.o2{width:340px;height:340px;right:-110px;bottom:5%;background:var(--rose);opacity:.28}
+nav{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:14px 22px;background:linear-gradient(var(--jet),transparent)}
+nav b{letter-spacing:.25em;background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+nav a{color:var(--muted);text-decoration:none;margin-left:14px;font-size:.8rem;transition:color .2s}
+nav a:hover{color:var(--rose)}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding-top:70px}
+.kick{letter-spacing:.5em;font-size:.8rem;color:var(--rose);font-weight:800;margin:0 0 14px;display:flex;gap:.6em}
+.kick span{opacity:0;transform:translateY(20px);animation:up .7s forwards}
+.hero h1{font-size:clamp(2.4rem,11vw,7rem);letter-spacing:.06em;line-height:1.02;margin:0;text-transform:uppercase;font-weight:800;display:flex;flex-wrap:wrap;column-gap:.35em}
+.w{display:inline-block;white-space:nowrap}
+.w i{font-style:normal;display:inline-block;opacity:0;transform:translateY(60px) rotate(8deg);animation:pop .9s cubic-bezier(.2,.9,.25,1.2) forwards,shine 4s 2s linear infinite;background:linear-gradient(100deg,#fff 20%,#7f93a8 40%,#d7dee6 60%,#fff 80%);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+@keyframes pop{to{opacity:1;transform:none}}
+@keyframes shine{to{background-position:-300% 0}}
+@keyframes up{to{opacity:1;transform:none}}
+.sub2{font-size:clamp(1.05rem,3.4vw,1.6rem);color:var(--muted);margin:20px 0 6px;opacity:0;animation:up .9s 1.8s forwards}
+.sub2 b{background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.type{height:1.6em;margin:0 0 28px;color:var(--muted);opacity:0;animation:up .8s 2.1s forwards}
+.type:after{content:"|";color:var(--rose);animation:bl 1s steps(1) infinite}
+@keyframes bl{50%{opacity:0}}
+.cta{display:inline-block;background:var(--rose);color:#06121c;padding:13px 30px;border-radius:999px;text-decoration:none;font-weight:600;width:max-content;opacity:0;animation:up .8s 2.4s forwards,pulse 2.4s 3.4s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(214,222,230,.6)}70%{box-shadow:0 0 0 18px rgba(214,222,230,0)}100%{box-shadow:0 0 0 0 rgba(214,222,230,0)}}
+.hint{margin-top:40px;color:var(--muted);font-size:.8rem;letter-spacing:.3em;opacity:0;animation:up 1s 3s forwards}
+.marq{overflow:hidden;white-space:nowrap;border-block:1px solid #222;padding:14px 0}
+.marq div{display:inline-block;animation:mq 24s linear infinite;font-weight:800;letter-spacing:.3em;color:#55555f;font-size:.9rem}
+@keyframes mq{to{transform:translateX(-50%)}}
+h2{font-size:clamp(1.6rem,5vw,2.4rem);margin:0 0 8px;display:inline-block;position:relative;padding-bottom:8px}
+h2:after{content:"";position:absolute;left:0;bottom:0;height:5px;width:0;background:var(--grad);border-radius:5px;transition:width 1s .2s}
+h2.on:after{width:100%}
+.sub{color:var(--muted);margin:0 0 24px}
+.rv{opacity:0;transform:translateY(34px);transition:opacity .8s,transform .8s}
+.rv.on{opacity:1;transform:none}
+section.pad{padding:70px 0}
+#wp{position:relative}
+.pin{position:sticky;top:0;height:100vh;overflow:hidden;display:flex;flex-direction:column;justify-content:center;padding-top:50px}
+.pin .wrap{width:100%}
+.track{display:flex;gap:24px;padding:0 20px;will-change:transform;--H:min(58vh,500px)}
+.card{flex:none;background:var(--card);border-radius:20px;overflow:hidden;cursor:pointer;border:0;padding:0;text-align:left;color:inherit;font:inherit;display:block;transition:box-shadow .3s}
+.card:hover{box-shadow:0 0 0 2px var(--rose),0 18px 40px rgba(214,222,230,.25)}
+.vw{position:relative;background:#000;height:var(--H);overflow:hidden}
+.vw.v{aspect-ratio:9/16}.vw.h{aspect-ratio:16/9}
+.vw video{width:100%;height:100%;object-fit:cover;display:block}
+.badge{position:absolute;left:10px;top:10px;background:rgba(0,0,0,.65);color:#fff;font-size:.7rem;padding:4px 10px;border-radius:99px;letter-spacing:.1em}
+.play{position:absolute;right:10px;bottom:10px;background:var(--rose);color:#06121c;font-size:.72rem;padding:5px 11px;border-radius:99px;font-weight:600}
+.cap{padding:12px 16px}.cap b{display:block}.cap small{color:var(--muted)}
+.wbar{height:4px;background:#222;border-radius:4px;margin:18px 20px 0;overflow:hidden}.wbar span{display:block;height:100%;width:0;background:var(--grad)}
+.col{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+.ph{position:relative;overflow:hidden;border-radius:14px;cursor:zoom-in;border:0;padding:0;background:#000;opacity:0;transform:scale(.9);transition:opacity .8s,transform .8s;grid-column:span 2;aspect-ratio:3/2}
+.ph.w3{grid-column:span 3}.ph.on{opacity:1;transform:none}
+.ph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .9s}
+.ph:hover img{transform:scale(1.1)}
+.ph span{position:absolute;left:0;right:0;bottom:0;padding:26px 12px 10px;background:linear-gradient(transparent,rgba(0,0,0,.8));color:#fff;font-size:.82rem;font-weight:600;transform:translateY(100%);transition:transform .4s;text-align:left}
+.ph:hover span{transform:none}
+@media (max-width:700px){.col{grid-template-columns:repeat(2,1fr)}.ph,.ph.w3{grid-column:span 1}.ph:first-child{grid-column:span 2}}
+.tag{font-size:clamp(1.8rem,6vw,3.4rem);font-weight:800;line-height:1.15;margin:6px 0 10px}
+.tag .tw{display:inline-block;margin-right:.28em;opacity:0;transform:translateY(34px) rotate(4deg);transition:opacity .7s,transform .7s cubic-bezier(.2,.9,.25,1.2)}
+.tag.on .tw{opacity:1;transform:none}.tag .ac{color:var(--rose)}
+#gp{height:640vh;position:relative}
+.gstage{position:relative;height:72vh}
+.gi{position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:20px;opacity:0;transform:translateY(50px);transition:opacity .5s,transform .5s;pointer-events:none}
+.gi.on{opacity:1;transform:none}
+.gn{font-size:clamp(3rem,10vw,6rem);font-weight:800;background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;line-height:1;opacity:.9}
+.gi h3{font-size:clamp(1.6rem,5vw,2.6rem);margin:6px 0}
+.gi p{color:var(--muted);margin:0;max-width:380px}
+.gi svg{width:100%;max-height:60vh;filter:drop-shadow(0 0 14px rgba(214,222,230,.55)) drop-shadow(0 0 22px rgba(90,125,160,.5))}
+.d{fill:none;stroke:url(#g);stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1}
+.dots{display:flex;gap:8px;margin:16px 0 0}.dots i{width:26px;height:4px;border-radius:4px;background:#2a2a32;transition:background .3s,width .3s}.dots i.on{background:var(--rose);width:44px}
+@media (max-width:760px){.gi{grid-template-columns:1fr;align-content:center;gap:0}.gi svg{max-height:34vh}}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px 40px;margin-top:20px}
+.bar{height:9px;background:#22222a;border-radius:9px;overflow:hidden;margin-top:6px}
+.bar span{display:block;height:100%;background:var(--grad);width:0;transition:width 1.6s cubic-bezier(.2,.8,.2,1)}
+.tl{border-left:3px solid var(--blue);padding-left:22px;margin:24px 0 0 6px}
+.tl div{margin-bottom:22px;position:relative}
+.tl div:before{content:"";position:absolute;left:-31px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--rose);box-shadow:0 0 0 5px rgba(214,222,230,.25)}
+.tl small{color:var(--muted)}
+footer{padding:80px 0 90px;text-align:center}
+.big{font-size:clamp(2rem,8vw,4.5rem);font-weight:800;line-height:1.1;background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;margin:0 0 20px}
+footer a{color:var(--text);text-decoration:none;font-weight:600}footer a:hover{color:var(--rose)}
+.mo,.lb{position:fixed;inset:0;background:rgba(0,0,0,.92);display:none;align-items:center;justify-content:center;z-index:40;padding:20px}
+.mo.on,.lb.on{display:flex}
+.mo video{max-width:100%;max-height:82vh;border-radius:12px;background:#000}
+.lb img{max-width:100%;max-height:80vh;border-radius:10px}
+.mx{position:absolute;top:calc(10px + env(safe-area-inset-top,0px));right:16px;background:none;border:0;color:#fff;font-size:2.4rem;cursor:pointer;line-height:1}
+.cp{position:absolute;bottom:calc(16px + env(safe-area-inset-bottom,0px));left:0;right:0;text-align:center;color:#ddd;font-weight:600}
+.lb button.n{position:absolute;background:none;border:0;color:#fff;cursor:pointer;font-size:2.6rem;padding:10px}
+.lg{display:flex;align-items:center}.lg img{height:44px;border-radius:9px;display:block}
+.promise{font-size:clamp(1.1rem,3.6vw,1.7rem);font-weight:600;margin:0 0 8px;opacity:0;animation:up .9s 1.9s forwards;max-width:640px}.promise b{background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.fl{color:var(--muted);margin:0 0 6px;opacity:0;animation:up .9s 2s forwards}.fl b{color:var(--text)}
+.pr{display:grid;grid-template-columns:1.2fr 1fr;gap:22px}
+@media (max-width:760px){.pr{grid-template-columns:1fr}}
+.pc{background:var(--card);border-radius:24px;padding:30px;position:relative;border:1px solid #26262e}
+.pc.main{border:2px solid transparent;background:linear-gradient(var(--card),var(--card)) padding-box,var(--grad) border-box;box-shadow:0 0 60px rgba(214,222,230,.15)}
+.ptag{display:inline-block;font-size:.75rem;letter-spacing:.25em;text-transform:uppercase;font-weight:800;color:var(--rose);margin-bottom:8px}
+.amt{font-size:clamp(3rem,10vw,5rem);font-weight:800;line-height:1.05;background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.amt2{font-size:clamp(2rem,6vw,3rem);font-weight:800;line-height:1.1;margin:6px 0 10px}
+.per{color:var(--muted);margin:4px 0 6px}.per b{color:var(--text)}
+.stack{display:grid;gap:22px;align-content:start}.note{color:var(--text);font-weight:600;margin:0 0 20px;padding-left:12px;border-left:3px solid var(--rose)}
+.reels{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0 22px}
+.reels i{width:20px;height:32px;border-radius:5px;background:#26262e;transition:background .4s,transform .4s}
+.reels.on i{background:var(--grad);transform:translateY(-3px)}
+.cta2{display:inline-block;background:var(--rose);color:#06121c;padding:13px 28px;border-radius:999px;text-decoration:none;font-weight:600;transition:transform .2s,box-shadow .2s}
+.cta2:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(214,222,230,.4)}
+.cta2.ghost{background:none;border:2px solid var(--blue);color:var(--text)}
+.fd{display:flex;gap:18px;align-items:center;background:var(--card);border-radius:20px;padding:20px;margin:6px 0 10px;border:1px solid #26262e}
+.fd img{height:84px;width:auto;border-radius:12px;flex:none}.fd b{font-size:1.25rem}.fd span{color:var(--rose);font-weight:600}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.kick span,.w i,.sub2,.type,.cta,.hint,.promise,.rv,.tag .tw,.ph{opacity:1;transform:none;-webkit-text-fill-color:initial}.d{stroke-dashoffset:0}}
+</style>
+</head>
+<body>
+<div id="pb"></div>
+<div class="fx"><div class="orb o1" id="o1"></div><div class="orb o2" id="o2"></div></div>
+<svg width="0" height="0" style="position:absolute"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7f93a8"/><stop offset="1" stop-color="#d7dee6"/></linearGradient></defs></svg>
+<nav><a class="lg" href="#top"><img src="logo.png" alt="HAP Media"></a><div><a href="#work">Work</a><a href="#pricing">Pricing</a><a href="#photos">Photos</a><a href="#about">Founder</a><a href="#contact">Contact</a></div></nav>
+<div class="wrap" id="top"><header class="hero">
+<p class="kick" id="kick"></p><h1 id="name"></h1>
+<p class="sub2"><b>Reels &amp; Video</b> Agency</p>
+<p class="fl">Founded by <b>Harshan Hashmi</b></p>
+<p class="type" id="type"></p>
+<a class="cta" href="#work">Watch my work ↓</a>
+<div class="hint">SCROLL TO EXPLORE</div>
+</header></div>
+<div class="marq" aria-hidden="true"><div id="mq"></div></div>
+
+<section id="promise" class="pad"><div class="wrap"><p class="ptag rv">Our Promise</p><p class="tag rv" id="pq"></p><p class="sub rv">Every reel we make is built around one goal: your growth.</p></div></section>
+
+<section id="work"><div id="wp"><div class="pin">
+<div class="wrap"><h2 class="rv">Motion Portfolio</h2><p class="sub rv">Keep scrolling and the videos slide by. Tap any video for full size with sound.</p></div>
+<div class="track" id="track"></div>
+<div class="wbar"><span id="wb"></span></div>
+</div></div></section>
+
+<section id="photos" class="pad"><div class="wrap">
+<h2 class="rv">Photography</h2><p class="tag rv" id="tag"></p>
+<p class="sub rv">Stage and event moments, shot and selected by me. Tap a photo to view it large.</p>
+<div class="col" id="col"></div></div></section>
+
+<section id="pricing" class="pad"><div class="wrap">
+<h2 class="rv">Pricing</h2><p class="sub rv">Reels and Meta ads, with clear pricing that fits your business.</p>
+<div class="pr">
+<div class="pc main rv"><div class="ptag">Reels Package</div>
+<div class="amt">₹<span id="cn" data-to="12000">0</span></div>
+<div class="per">for <b><span id="cr" data-to="14">0</span> reels</b> · about ₹857 per reel</div>
+<div class="reels" id="rl"></div>
+<p class="note">Plan can be discussed according to your business.</p>
+<a class="cta2" href="https://wa.me/917972863490?text=Hi%20Harshan%2C%20I%20want%20the%20HAP%20Media%2014%20reels%20package" target="_blank" rel="noopener">Book this package</a></div>
+<div class="stack">
+<div class="pc rv"><div class="ptag">Meta Ads</div><div class="amt2">Grow with ads</div>
+<p class="sub">We also run Meta ads (Facebook and Instagram) that put your reels in front of the right customers.</p>
+<a class="cta2" href="https://wa.me/917972863490?text=Hi%20Harshan%2C%20I%20want%20to%20know%20about%20Meta%20ads%20from%20HAP%20Media" target="_blank" rel="noopener">Ask about Meta Ads</a></div>
+<div class="pc rv"><div class="ptag">Custom Plan</div><div class="amt2">Let’s talk</div>
+<p class="sub">Plans can be discussed according to your business: more reels, shoots, ads or a mix.</p>
+<a class="cta2 ghost" href="tel:+917972863490">Call +91 7972863490</a></div>
+</div>
+</div></div></section>
+
+<section id="about" class="pad"><div class="wrap"><h2 class="rv">Meet the Founder</h2>
+<div class="fd rv"><img src="logo.png" alt="HAP Media logo"><div><b>Harshan Hashmi</b><br><span>Founder, HAP Media</span><p class="sub" style="margin:8px 0 0">Video editor, videographer, script writer and storyteller. A problem solver behind every reel we make.</p></div></div>
+</div></section>
+<footer id="contact"><div class="wrap">
+<p class="rv" style="font-weight:800;letter-spacing:.3em;color:var(--rose);margin:0 0 6px">HAP MEDIA</p>
+<p class="big rv">Ready to grow your business?</p>
+<p class="rv"><a href="mailto:harshanhashmi091@gmail.com">harshanhashmi091@gmail.com</a><br><a href="tel:+917972863490">+91 7972863490</a><br><span class="sub">Champa Chowk, Aurangabad</span></p></div></footer>
+
+<div class="lb" id="lb"><button class="mx" id="lx" aria-label="Close">&times;</button><button class="n" id="lp" style="left:6px" aria-label="Previous">&#8249;</button><img id="li" alt=""><button class="n" id="ln" style="right:6px" aria-label="Next">&#8250;</button><div class="cp" id="lc"></div></div>
+<div class="mo" id="mo"><button class="mx" id="mx" aria-label="Close">&times;</button><video id="mv" controls playsinline></video><div class="cp" id="mtt"></div></div>
+<script>
+var PH=function(f){return "photos/"+f};//PHMAP
+var works=[
+ {t:"Annual Event Highlight",c:"Event video · Highlight edit",s:"videos/annual-event-highlight.mp4",o:"h"},
+ {t:"Cafe Fast Beat Edit",c:"Reel · Beat-synced edit",s:"videos/cafe-fast-beat-edit.mp4",o:"v"},
+ {t:"Hotel Owner Edit",c:"Brand video · Hospitality",s:"videos/hotel-owner-edit.mp4",o:"v"},
+ {t:"IP AI Content",c:"Social content · AI visuals",s:"videos/ip-ai-content.mp4",o:"v"},
+ {t:"Typography Edit",c:"Kinetic typography · Motion",s:"videos/typography-edit.mp4",o:"v"}];
+var shots=[["photo01.jpg","Quiet confidence on stage"],["photo02.jpg","Joy in the spotlight"],["photo03.jpg","Hats, sparkle and rhythm"],["photo04.jpg","A moment of honour"],["photo05.jpg","Pointing at the lights"],["photo06.jpg","Dance in the mist"],["photo07.jpg","Little bites, big colours"],["photo08.jpg","The torch bearer"],["photo09.jpg","Little superheroes"],["photo10.jpg","Grace in gold"],["photo11.jpg","Lost in the movement"]];
+function cl(x){return Math.min(1,Math.max(0,x))}
+var n=document.getElementById("name");
+"HAP MEDIA".split(" ").forEach(function(wd,wi){var w=document.createElement("span");w.className="w";wd.split("").forEach(function(ch,i){var s=document.createElement("i");s.textContent=ch;s.style.animationDelay=(500+(wi*7+i)*55)+"ms,2s";w.appendChild(s)});n.appendChild(w)});
+var k=document.getElementById("kick");"WELCOME TO".split(" ").forEach(function(t,i){var s=document.createElement("span");s.textContent=t;s.style.animationDelay=(i*250)+"ms";k.appendChild(s)});
+var roles=["Reels","Video Production","Meta Ads","Photography","Storytelling"],ri=0,ci=0,del=false,ty=document.getElementById("type");
+function tick(){var r=roles[ri];ci+=del?-1:1;ty.textContent=r.slice(0,ci);var d=del?45:90;if(!del&&ci==r.length){del=true;d=1300}else if(del&&ci==0){del=false;ri=(ri+1)%roles.length;d=300}setTimeout(tick,d)}
+setTimeout(tick,2300);
+var mt="";for(var q=0;q<12;q++)mt+="REELS  ✦  VIDEO PRODUCTION  ✦  META ADS  ✦  PHOTOGRAPHY  ✦  STORYTELLING  ✦  ";document.getElementById("mq").textContent=mt;
+var track=document.getElementById("track");
+works.forEach(function(w,i){var b=document.createElement("button");b.className="card";
+b.innerHTML='<div class="vw '+w.o+'"><video muted loop playsinline preload="metadata"></video><span class="badge"></span><span class="play">▶ Play with sound</span></div><div class="cap"><b></b><small></small></div>';
+b.querySelector("video").src=w.s+"#t=0.1";b.querySelector(".badge").textContent="0"+(i+1);b.querySelector("b").textContent=w.t;b.querySelector("small").textContent=w.c;
+b.addEventListener("click",function(){var mv=document.getElementById("mv");mv.src=w.s;document.getElementById("mtt").textContent=w.t;document.getElementById("mo").classList.add("on");mv.play().catch(function(){})});
+track.appendChild(b)});
+function closeMo(){var mv=document.getElementById("mv");mv.pause();mv.removeAttribute("src");mv.load();document.getElementById("mo").classList.remove("on")}
+document.getElementById("mx").onclick=closeMo;document.getElementById("mo").addEventListener("click",function(e){if(e.target===this)closeMo()});
+var pq=document.getElementById("pq");["We","don’t","just","make","reels.","We","promise","to","grow","your","business."].forEach(function(t,i){var s=document.createElement("span");s.className="tw"+(i>5?" ac":"");s.textContent=t;s.style.transitionDelay=(i*110)+"ms";pq.appendChild(s)});
+var tg=document.getElementById("tag");["Every","frame","tells","a","story."].forEach(function(t,i){var s=document.createElement("span");s.className="tw"+(i==1?" ac":"");s.textContent=t;s.style.transitionDelay=(i*140)+"ms";tg.appendChild(s)});
+var col=document.getElementById("col"),cur=0;
+shots.forEach(function(p,i){var b=document.createElement("button");b.className="ph"+((i==3||i==4)?" w3":"");b.style.transitionDelay=((i%4)*90)+"ms";b.innerHTML='<img loading="lazy" alt=""><span></span>';var im=b.querySelector("img");im.src=PH(p[0]);im.alt=p[1];b.querySelector("span").textContent=p[1];b.addEventListener("click",function(){show(i)});col.appendChild(b)});
+function show(i){cur=(i+shots.length)%shots.length;var li=document.getElementById("li");li.src=PH(shots[cur][0]);li.alt=shots[cur][1];document.getElementById("lc").textContent=shots[cur][1]+"  ·  "+(cur+1)+"/"+shots.length;document.getElementById("lb").classList.add("on")}
+function closeLb(){document.getElementById("lb").classList.remove("on")}
+document.getElementById("lx").onclick=closeLb;document.getElementById("lp").onclick=function(){show(cur-1)};document.getElementById("ln").onclick=function(){show(cur+1)};
+document.getElementById("lb").addEventListener("click",function(e){if(e.target===this)closeLb()});
+document.addEventListener("keydown",function(e){if(e.key==="Escape"){closeLb();closeMo()}if(document.getElementById("lb").classList.contains("on")){if(e.key==="ArrowLeft")show(cur-1);if(e.key==="ArrowRight")show(cur+1)}});
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("on");var b=e.target.querySelector(".bar span");if(b)b.style.width=b.dataset.w+"%";io.unobserve(e.target)}})},{threshold:.15});
+document.querySelectorAll(".rv,h2,.ph").forEach(function(el){io.observe(el)});
+var vo=new IntersectionObserver(function(es){es.forEach(function(e){var v=e.target.querySelector("video");if(e.isIntersecting)v.play().catch(function(){});else v.pause()})},{threshold:.5});
+document.querySelectorAll(".card").forEach(function(c){vo.observe(c)});
+var rl=document.getElementById("rl");for(var r=0;r<14;r++){rl.appendChild(document.createElement("i"))}
+var po=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;po.disconnect();
+[["cn",12000],["cr",14]].forEach(function(c){var el=document.getElementById(c[0]),t0=performance.now();(function f(now){var p=Math.min(1,(now-t0)/1600),v=Math.round(c[1]*(1-Math.pow(1-p,3)));el.textContent=c[0]=="cn"?v.toLocaleString("en-IN"):v;if(p<1)requestAnimationFrame(f)})(t0)});
+rl.querySelectorAll("i").forEach(function(i,n){i.style.transitionDelay=(n*90)+"ms"});rl.classList.add("on")})},{threshold:.4});
+po.observe(document.getElementById("rl"));
+var wp=document.getElementById("wp"),wb=document.getElementById("wb"),pb=document.getElementById("pb"),o1=document.getElementById("o1"),o2=document.getElementById("o2");
+function size(){var mx=Math.max(0,track.scrollWidth-innerWidth+20);wp.style.height=(mx+innerHeight)+"px"}
+function upd(){var y=pageYOffset,vh=innerHeight,doc=document.documentElement;
+pb.style.width=(y/Math.max(1,doc.scrollHeight-vh)*100)+"%";
+o1.style.transform="translate3d(0,"+(y*.12)+"px,0)";o2.style.transform="translate3d(0,"+(-y*.08)+"px,0)";
+var r=wp.getBoundingClientRect(),p=cl(-r.top/Math.max(1,wp.offsetHeight-vh)),mx=Math.max(0,track.scrollWidth-innerWidth+20);
+track.style.transform="translate3d("+(-p*mx)+"px,0,0)";wb.style.width=(p*100)+"%";}
+var tk=false;function onS(){if(!tk){tk=true;requestAnimationFrame(function(){upd();tk=false})}}
+addEventListener("scroll",onS,{passive:true});addEventListener("resize",function(){size();upd()});addEventListener("load",function(){size();upd()});
+size();upd();
+</script>
+</body>
+</html>
